@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЭкоДетство – детский центр развития в Туле</title>
+<meta name="description" content="Детский центр развития ЭкоДетство в Туле: занятия для детей от 9 месяцев до 14 лет. Логопед, подготовка к школе, нейропсихолог, английский, скорочтение.">
+<meta property="og:title" content="ЭкоДетство – детский центр развития в Туле">
+<meta property="og:description" content="Развиваем речь, мышление, внимание, моторику и творческие способности детей от 9 месяцев до 14 лет.">
+<link rel="icon" href="assets/giraffe.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Nunito:wght@700;800;900&display=swap"></noscript>
+<style>
+  :root {
+    --sky: #92d2ea; --blue: #00abd3; --yellow: #f8cb12; --orange: #eb6624;
+    --ink: #0a2530; --deep: #0b3a4c; --paper: #f4fbfe; --white: #ffffff;
+    --soft: #3d5967;
+    --display: "Nunito", "Segoe UI", system-ui, sans-serif;
+    --text: "Manrope", "Segoe UI", system-ui, sans-serif;
+    --m: 24px;
+    --ease: cubic-bezier(.16, 1, .3, 1);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: var(--text); font-size: 18px; line-height: 1.55; color: var(--ink); background: var(--sky); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  h1, h2, h3, p, ul, ol, blockquote, figure { margin: 0; padding: 0; }
+  ul, ol { list-style: none; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  ::selection { background: var(--yellow); color: var(--ink); }
+  .display { font-family: var(--display); font-weight: 900; letter-spacing: -.045em; line-height: .9; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; padding: 0 32px; background: var(--ink); color: var(--yellow); font: 800 18px/1 var(--display); text-decoration: none; border-radius: 0; transition: transform .2s var(--ease), background-color .2s var(--ease); }
+  @media (hover: hover) and (pointer: fine) { .btn:hover { transform: translateY(-3px); background: var(--deep); } }
+  .btn:active { transform: translateY(1px) scale(.98); }
+  .btn--yellow { background: var(--yellow); color: var(--ink); }
+  .btn--yellow:hover { background: #ffd93a; }
+
+  /* ---- 1 · первый экран: две строки на всю ширину -------------------------- */
+  .hero { position: relative; min-height: 100svh; display: grid; grid-template-rows: auto 1fr auto; padding: var(--m); background: var(--sky); }
+  .hero__bg { position: absolute; left: 0; bottom: 0; width: 100%; height: 74%; object-fit: cover; object-position: 70% 60%; z-index: 0; }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 74%; z-index: 0; pointer-events: none; background: linear-gradient(to bottom, var(--sky) 0%, rgb(146 210 234 / .85) 22%, rgb(146 210 234 / 0) 70%); } /* taste-skill-ignore */
+  .top, .hero h1, .hero__row { position: relative; z-index: 1; }
+  .hero__row p { background: var(--sky); padding: 12px 16px 12px 0; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+  .top img { height: 56px; width: auto; }
+  .top nav { display: flex; gap: 28px; font-size: 16px; font-weight: 600; }
+  .top nav a { text-decoration: none; padding: 12px 0; }
+  .top nav a:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+  .menu { display: none; position: relative; }
+  .menu summary { list-style: none; cursor: pointer; min-height: 44px; display: inline-flex; align-items: center; padding: 0 4px; font: 800 16px var(--display); }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu div { position: absolute; left: 0; top: 48px; z-index: 5; min-width: 200px; background: var(--ink); display: grid; padding: 8px; }
+  .menu a { color: var(--white); text-decoration: none; min-height: 44px; display: flex; align-items: center; padding: 0 12px; font-size: 16px; }
+  .menu a:hover { background: var(--deep); }
+  .hero h1 { align-self: start; margin-top: clamp(24px, 5vh, 64px); font-size: clamp(96px, 21vw, 330px); display: grid; }
+  .line { display: block; overflow: hidden; padding-bottom: .06em; }
+  .line span { display: block; transform: translateY(105%); animation: rise .9s var(--ease) forwards; }
+  .line:nth-child(1) { text-align: left; }
+  .line:nth-child(2) { text-align: right; color: var(--deep); }
+  .line:nth-child(2) span { animation-delay: .11s; }
+  .hero__row { display: flex; justify-content: space-between; align-items: end; gap: 32px; padding-bottom: 4px; opacity: 0; transform: translateY(16px); animation: fadeup .7s .55s var(--ease) forwards; }
+  .hero__row p { font-size: 22px; line-height: 1.4; max-width: 44ch; font-weight: 500; }
+  @keyframes rise { to { transform: none; } }
+  @keyframes fadeup { to { opacity: 1; transform: none; } }
+
+  /* ---- 2 · направления: четыре карточки веером на тёмном поле ---------------- */
+  .fan { background: var(--deep); color: var(--white); padding: clamp(80px, 12vw, 160px) var(--m); }
+  .fan__head { max-width: 1440px; margin: 0 auto 72px; display: grid; grid-template-columns: 1fr minmax(0, 28rem); gap: 40px; align-items: end; }
+  .fan__head h2 { font-size: clamp(40px, 5.6vw, 84px); }
+  .fan__head p { font-size: 18px; color: #d4eaf2; }
+  .cards { display: flex; justify-content: center; padding: 16px 0 40px; }
+  .card { --w: min(340px, 28vw); flex: none; width: var(--w); height: calc(var(--w) * 1.235); padding: calc(var(--w) * .08) calc(var(--w) * .29) calc(var(--w) * .08) calc(var(--w) * .08); color: var(--ink); display: flex; flex-direction: column; gap: 16px; margin-left: calc(var(--w) * -.265); rotate: var(--r); }
+  .card:first-child { margin-left: 0; }
+  @media (hover: hover) and (pointer: fine) { .card:hover { translate: 0 -10px; } }
+  a.card { text-decoration: none; cursor: pointer; }
+  .card__go { font: 800 16px/1.2 var(--display); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  .card h3 { font: 900 clamp(19px, 2.1vw, 30px)/1 var(--display);  letter-spacing: -.01em; overflow-wrap: anywhere; }
+  .card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+  .card p { font-size: clamp(14px, 1.2vw, 16px); line-height: 1.4; margin-top: auto; }
+  .pl { scroll-margin-top: 96px; }
+  .card:nth-child(1) { background: var(--yellow); --r: -4deg; }
+  .card:nth-child(2) { background: var(--orange); --r: 2deg; color: var(--ink); }
+  .card:nth-child(3) { background: var(--blue); --r: -2deg; }
+  .card:nth-child(4) { background: var(--white); --r: 4deg; }
+
+  /* ---- 3 · как это устроено: лесенка ---------------------------------------- */
+  .steps { background: var(--yellow); padding: clamp(80px, 12vw, 180px) var(--m); }
+  .steps__in { max-width: 1440px; margin: 0 auto; display: grid; gap: 56px; }
+  .step { padding-left: calc(var(--k) * 9%); }
+  .step h2 { font: 900 clamp(36px, 4.6vw, 76px)/1 var(--display); letter-spacing: -.035em; }
+  .step p { margin-top: 12px; font-size: 18px; max-width: 34ch; color: var(--ink); }
+  .step:last-child h2 { color: var(--deep); }
+
+  /* ---- 4 · цены: таблица на одном размере ------------------------------------ */
+  .prices { background: var(--paper); padding: clamp(80px, 12vw, 160px) var(--m); }
+  .prices__in { max-width: 1440px; margin: 0 auto; }
+  .prices h2 { font-size: clamp(40px, 5.6vw, 84px); margin-bottom: 64px; }
+  .plist { font-size: clamp(20px, 2.1vw, 30px); font-weight: 600; line-height: 1.5; }
+  .pl summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) 33% auto 1.2em; gap: 0 16px; align-items: baseline; padding: .25em 0; transition: background-color .2s var(--ease); }
+  .pl summary::-webkit-details-marker { display: none; }
+  @media (hover: hover) and (pointer: fine) { .pl summary:hover { background: var(--yellow); } }
+  .pl summary::after { content: "+"; font: 800 1em/1 var(--display); text-align: center; transition: transform .25s var(--ease); }
+  .pl[open] summary::after { transform: rotate(45deg); }
+  .pl[open] summary { background: var(--yellow); }
+  .pl:not([open]) .pl__b { display: none; }
+  .pl__g { color: var(--soft); font-weight: 500; }
+  .pl[open] .pl__g { color: var(--ink); }
+  .pl__p { text-align: right; font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .pl__b { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 32px; padding: 24px 0 40px; font-size: 18px; font-weight: 400; }
+  .pl__b p { max-width: 52ch; margin-top: 24px; }
+  .pl__b figure { aspect-ratio: 4 / 3; overflow: hidden; }
+  .pl__b img { width: 100%; height: 100%; object-fit: cover; }
+  .prices__note { margin-top: 48px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; }
+  .prices__note p { max-width: 46ch; color: var(--soft); }
+
+  /* ---- 5 · отзывы ----------------------------------------------------------- */
+  .rev { background: var(--blue); padding: clamp(80px, 12vw, 160px) var(--m); }
+  .rev__in { max-width: 1440px; margin: 0 auto; }
+  .rev__top { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px 48px; margin-bottom: 80px; }
+  .rev h2 { font-size: clamp(56px, 11vw, 160px); }
+  .rev__score { font: 800 22px/1.3 var(--display); max-width: 18ch; }
+  .rev__score b { display: block; font-size: clamp(56px, 7vw, 100px); line-height: .9; letter-spacing: -.04em; }
+  .rev__score a { font: 600 16px var(--text); display: inline-flex; align-items: center; min-height: 44px; }
+    .quote { max-width: 1440px; margin: 0 0 80px; display: block; }
+  .quote:last-child { margin-bottom: 0; }
+  .quote blockquote { font: 800 clamp(22px, 2.4vw, 34px)/1.25 var(--display); max-width: 36ch; letter-spacing: -.01em; }
+  .quote cite { display: block; margin-top: 20px; font: 500 16px/1.4 var(--text); font-style: normal; }
+  .quote:nth-of-type(odd) { margin-left: 33%; }
+
+
+  /* ---- 5а · залы по филиалам и педагоги -------------------------------------- */
+  .fl { background: var(--paper); padding: clamp(80px, 12vw, 160px) var(--m); }
+  .fl__in { max-width: 1440px; margin: 0 auto; }
+  .fl h2 { font-size: clamp(44px, 7vw, 100px); }
+  .fl__lead { margin-top: 24px; max-width: 52ch; }
+  .fl__tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 48px 0 24px; }
+  .fl__tabs button { min-height: 48px; padding: 0 20px; border: 0; border-radius: 0; background: var(--white); color: var(--ink); font: 800 16px var(--display); cursor: pointer; transition: background-color .2s var(--ease); }
+  @media (hover: hover) and (pointer: fine) { .fl__tabs button:hover { background: var(--sky); } }
+  .fl__tabs button[aria-selected="true"] { background: var(--yellow); }
+  .fl__addr { font: 800 22px/1.3 var(--display); margin-bottom: 16px; }
+  .fl__addr b { font-weight: 800; display: block; }
+  .fl__ph { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; }
+  .fl__ph figure { position: relative; overflow: hidden; background: var(--sky); }
+  .fl__ph figure:first-child { grid-row: 1 / 3; min-height: 360px; }
+  .fl__ph img { width: 100%; height: 100%; object-fit: cover; }
+  .fl figcaption { position: absolute; left: 0; bottom: 0; padding: 6px 12px; background: var(--ink); color: var(--white); font-size: 14px; font-weight: 600; }
+  .fl__team { margin-top: clamp(80px, 10vw, 140px); }
+  .fl__list { margin-top: 40px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 24px; }
+  .tm { display: grid; gap: 4px; align-content: start; }
+  .tm figure { aspect-ratio: 4 / 5; overflow: hidden; margin-bottom: 12px; background: var(--sky); }
+  .tm img { width: 100%; height: 100%; object-fit: cover; }
+  .tm b { font: 800 22px/1.2 var(--display); }
+  .tm span { font-size: 16px; }
+  @media (max-width: 860px) {
+    .fl__ph { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .fl__ph figure:first-child { grid-column: 1 / 3; grid-row: auto; min-height: 0; aspect-ratio: 16 / 10; }
+    .fl__ph figure { aspect-ratio: 4 / 3; }
+    .fl__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
+    .fl__tabs button { padding: 0 14px; }
+  }
+
+  /* ---- 6 · адреса: купон ----------------------------------------------------- */
+  .visit { background: var(--sky); padding: clamp(80px, 10vw, 140px) var(--m); }
+  .place { max-width: 1280px; margin: 0 auto 24px; display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 24px; }
+  .place figure { overflow: hidden; height: clamp(320px, 38vw, 560px); }
+  .place img { width: 100%; height: 100%; object-fit: cover; }
+  .coupon { max-width: 1280px; margin: 0 auto; background: #f6cdb0; border-radius: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); position: relative;
+    -webkit-mask: radial-gradient(circle 14px at 50% 0, #0000 98%, #000) top / 100% 51% no-repeat, radial-gradient(circle 14px at 50% 100%, #0000 98%, #000) bottom / 100% 51% no-repeat; /* taste-skill-ignore */
+            mask: radial-gradient(circle 14px at 50% 0, #0000 98%, #000) top / 100% 51% no-repeat, radial-gradient(circle 14px at 50% 100%, #0000 98%, #000) bottom / 100% 51% no-repeat; } /* taste-skill-ignore */
+  .coupon__l { padding: 48px; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; border-right: 5px dotted var(--sky); }
+  .coupon__l h2 { font: 900 clamp(30px, 3.4vw, 50px)/1 var(--display); letter-spacing: -.02em; }
+  .coupon__l p { font-size: 18px; max-width: 32ch; }
+  .coupon__r { padding: 48px; display: grid; gap: 10px; align-content: center; }
+  .addr { background: rgba(255, 255, 255, .5); min-height: 52px; padding: 10px 18px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 16px; font-size: 16px; }
+  .addr b { font: 800 18px var(--display); }
+  .coupon__btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
+  .coupon__btns .btn { padding: 0 16px; }
+
+  /* ---- 7 · подвал: приглашение над обрезанным именем ------------------------- */
+  .foot { position: relative; background: var(--deep); color: var(--white); min-height: 100svh; padding: clamp(64px, 9vw, 120px) var(--m) 0; overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; }
+  .foot__top { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px; }
+  .foot__top > div { grid-column: 1 / 8; }
+  .foot h2 { font-size: clamp(40px, 5.2vw, 84px); margin-bottom: 36px; }
+  .foot__links { grid-column: 10 / 13; display: grid; gap: 6px; align-content: start; font-size: 16px; }
+  .foot__links a { min-height: 44px; display: inline-flex; align-items: center; }
+  .foot__credit { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 14px; color: #bfe0ec; align-self: end; padding-bottom: 20px; }
+  .foot__name { display: block; width: min(100%, 760px); height: auto; margin: 0 auto; padding-bottom: clamp(32px, 5vw, 64px); }
+
+  .rv { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); transition-delay: var(--d, 0ms); }
+  .rv.on { opacity: 1; transform: none; }
+  html:not(.js) .rv { opacity: 1; transform: none; }
+
+  @media (max-width: 860px) {
+    body { font-size: 16px; }
+    .top nav { display: none; }
+    .menu { display: block; }
+    .top { gap: 12px; }
+    .top .btn { min-height: 44px; padding: 0 18px; font-size: 16px; }
+    .hero { padding: 20px 16px; }
+    .hero h1 { font-size: 22vw; margin-top: 6vh; }
+    .line:nth-child(1), .line:nth-child(2) { text-align: left; }
+    .hero__row { flex-direction: column; align-items: stretch; gap: 20px; }
+    .hero__row p { font-size: 18px; }
+    .hero__row .btn { width: 100%; }
+    .hero__bg, .hero::after { height: 62%; }
+    .fan, .steps, .prices, .fl, .rev, .visit { padding: 72px 16px; }
+    .fan__head { grid-template-columns: 1fr; margin-bottom: 40px; }
+    .cards { justify-content: flex-start; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 16px; }
+    .card { margin-left: 0; width: 70%; scroll-snap-align: start; rotate: none; padding: 24px; height: auto; min-height: 400px; --w: 82%; }
+    .card img { aspect-ratio: 4 / 3; }
+    .step { padding-left: calc(var(--k) * 6vw); }
+    .step h2 { font-size: 8.4vw; }
+    .pl summary { grid-template-columns: minmax(0, 1fr) auto 1.2em; }
+    .pl summary { font-size: 20px; padding: .4em 0; }
+    .pl__g { grid-column: 1; grid-row: 2; font-size: 14px; }
+    .pl__p { grid-column: 2; grid-row: 1; }
+    .pl summary::after { grid-column: 3; grid-row: 1; }
+    .pl__b { grid-template-columns: 1fr; gap: 20px; font-size: 16px; }
+    .rev h2 { font-size: 16vw; }
+    .quote, .quote:nth-of-type(odd) { margin: 0 0 56px; }
+    .quote:nth-of-type(odd) { margin-left: 8vw; }
+    .quote blockquote { font-size: 22px; }
+    .place { grid-template-columns: 1fr; }
+    .place figure { height: 260px; }
+    .place figure:first-child { height: 380px; }
+    .coupon { grid-template-columns: 1fr; margin: 0 -4px;
+      -webkit-mask: radial-gradient(circle 14px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat, radial-gradient(circle 14px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat; /* taste-skill-ignore */
+              mask: radial-gradient(circle 14px at 0 50%, #0000 98%, #000) left / 51% 100% no-repeat, radial-gradient(circle 14px at 100% 50%, #0000 98%, #000) right / 51% 100% no-repeat; } /* taste-skill-ignore */
+    .coupon__l { padding: 32px 24px; border-right: 0; border-bottom: 5px dotted var(--sky); }
+    .coupon__r { padding: 28px 24px 32px; }
+    .coupon__btns { grid-template-columns: 1fr; }
+    .foot { padding: 56px 16px 0; min-height: 0; gap: 40px; }
+    .foot__top { display: block; }
+    .foot h2 { font-size: 11vw; }
+    .foot .btn { width: 100%; }
+    .foot__links a { min-height: 44px; display: inline-flex; align-items: center; }
+    .foot__links { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; }
+    .foot__name { padding-bottom: 32px; }
+  }
+  @media (min-width: 560px) and (max-width: 860px) {
+    .cards { flex-wrap: wrap; justify-content: center; overflow: visible; scroll-snap-type: none; margin: 0; padding: 16px 0; gap: 16px; }
+    .card { width: calc(50% - 8px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .line span, .hero__row { animation: none; opacity: 1; transform: none; }
+    .rv { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <img class="hero__bg" src="assets/hero.webp" srcset="assets/hero-1200.webp 1200w, assets/hero.webp 1920w" sizes="100vw" alt="Деревянный стол с разноцветными кубиками, карандашами и детскими книжками" width="1920" height="1072">
+  <div class="top">
+    <a href="#top" aria-label="ЭкоДетство"><img src="assets/logo.png" alt="ЭкоДетство" width="900" height="291"></a>
+    <nav aria-label="Разделы">
+      <a href="#napravleniya">Направления</a>
+      <a href="#ceny">Цены</a>
+      <a href="#zaly">Залы и педагоги</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#adresa">Адреса</a>
+    </nav>
+    <details class="menu"><summary>Меню</summary><div><a href="#napravleniya">Направления</a><a href="#ceny">Цены</a><a href="#zaly">Залы и педагоги</a>
+      <a href="#otzyvy">Отзывы</a><a href="#adresa">Адреса</a></div></details>
+    <a class="btn btn--yellow" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a>
+  </div>
+  <h1 class="display"><span class="line"><span>Учимся</span></span><span class="line"><span>играя</span></span></h1>
+  <div class="hero__row">
+    <p>Центр развития в Туле для детей от 9 месяцев до 14 лет: речь, школа, английский, логопед.</p>
+    <a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a>
+  </div>
+</header>
+
+<main>
+
+<section class="fan" id="napravleniya" aria-labelledby="fan-h">
+  <div class="fan__head">
+    <h2 class="display" id="fan-h">Занятия на любой возраст</h2>
+    <p>Развиваем речь, мышление, внимание, моторику и творческие способности. Подбираем занятия под возраст и задачи ребёнка. Есть также логоритмика, сенсорная интеграция и мини-детский сад.</p>
+  </div>
+  <div class="cards">
+    <a class="card rv" href="#ceny" data-open="4,6"><h3>Малыши</h3><img src="assets/card-malyshi.webp" alt="Малыш складывает деревянные кубики на мягком коврике" width="1000" height="1000" loading="lazy"><p>От 9 месяцев: Baby-курс, раннее развитие, творчество.</p><span class="card__go">Смотреть занятия и цены</span></a>
+    <a class="card rv" href="#ceny" data-open="3,4" style="--d:90ms"><h3>Речь</h3><img src="assets/card-rech.webp" alt="Руки ребёнка и логопеда над зеркалом и карточкой" width="1000" height="1000" loading="lazy"><p>Логопед и запуск речи, постановка звуков.</p><span class="card__go">Смотреть занятия и цены</span></a>
+    <a class="card rv" href="#ceny" data-open="1,2,8,9" style="--d:180ms"><h3>Школа</h3><img src="assets/card-shkola.webp" alt="Рука ребёнка пишет в прописи, рядом счётные палочки" width="1000" height="1000" loading="lazy"><p>Подготовка к школе, скорочтение, каллиграфия.</p><span class="card__go">Смотреть занятия и цены</span></a>
+    <a class="card rv" href="#ceny" data-open="6" style="--d:270ms"><h3>Движение</h3><img src="assets/card-dvizhenie.webp" alt="Ребёнок идёт по низкому бревну в спортивном зале" width="1000" height="1000" loading="lazy"><p>Адаптивная физкультура и моторное развитие.</p><span class="card__go">Смотреть занятия и цены</span></a>
+  </div>
+</section>
+
+<section class="steps" aria-label="Как записаться">
+  <div class="steps__in">
+    <div class="step rv" style="--k:0"><h2>Расскажите о ребёнке.</h2><p>Сколько ему лет и что хотите развить.</p></div>
+    <div class="step rv" style="--k:1"><h2>Подберём занятия.</h2><p>Под возраст и задачи, из девяти направлений.</p></div>
+    <div class="step rv" style="--k:2"><h2>Выберем адрес.</h2><p>Четыре адреса в Туле и один в Болохово.</p></div>
+    <div class="step rv" style="--k:3"><h2>Приходите играть.</h2><p>Любой из пяти адресов, по записи.</p></div>
+  </div>
+</section>
+
+<section class="prices" id="ceny" aria-labelledby="pr-h">
+  <div class="prices__in">
+    <h2 class="display" id="pr-h">Цены на занятия</h2>
+    <div class="plist">
+      <details class="pl" id="pl-1" >
+        <summary><span class="pl__n">Подготовка к школе</span><span class="pl__g">дошкольники</span><span class="pl__p">600&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Понятия об окружающем мире, знакомство с буквами и счётом, занятия на графомоторику. Занятия подходят для детей 4+ и построены по структуре (из отзыва на Яндекс.Картах).</p></div>
+          <figure><img src="assets/price-1.webp" alt="Руки ребёнка с тетрадью и счётными палочками" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-2" >
+        <summary><span class="pl__n">Экспресс-подготовка к школе</span><span class="pl__g">дошкольники</span><span class="pl__p">500&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Короткий формат подготовки к школе. Длительность и программу уточняйте у администратора.</p></div>
+          <figure><img src="assets/price-2.webp" alt="Детский стол с коротким листом заданий и карандашом" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-3" >
+        <summary><span class="pl__n">Логопед</span><span class="pl__g">речь</span><span class="pl__p">850&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Постановка звукопроизношения и задания на дом для закрепления (из отзывов на Яндекс.Картах).</p></div>
+          <figure><img src="assets/price-3.webp" alt="Зеркальце и карточки для артикуляции на столе логопеда" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-4" >
+        <summary><span class="pl__n">Запуск речи</span><span class="pl__g">малыши</span><span class="pl__p">1&nbsp;100&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Занятия для запуска речи у малышей. Возраст и формат занятий уточняйте у администратора.</p></div>
+          <figure><img src="assets/price-4.webp" alt="Малыш с взрослым разглядывает книжку с животными" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-5" >
+        <summary><span class="pl__n">Нейропсихолог</span><span class="pl__g">мышление</span><span class="pl__p">1&nbsp;050&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Занятия для развития внимания, мышления и моторики.</p></div>
+          <figure><img src="assets/price-5.webp" alt="Руки ребёнка раскладывают цветные деревянные фигуры на доске" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-6" >
+        <summary><span class="pl__n">Адаптивная физкультура</span><span class="pl__g">движение</span><span class="pl__p">950&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Физкультура и моторное развитие с учётом особенностей ребёнка.</p></div>
+          <figure><img src="assets/price-6.webp" alt="Спортзал с мягкими матами, бревном и большим мячом" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-7" >
+        <summary><span class="pl__n">Знакомство с английским</span><span class="pl__g">язык</span><span class="pl__p">550&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Первое знакомство с английским языком для детей.</p></div>
+          <figure><img src="assets/price-7.webp" alt="Яркие карточки с животными и плюшевая игрушка на низком столе" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-8" >
+        <summary><span class="pl__n">Скорочтение</span><span class="pl__g">школьники</span><span class="pl__p">600&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Занятия для школьников. Ещё в центре есть ментальная арифметика, её стоимость уточняйте.</p></div>
+          <figure><img src="assets/price-8.webp" alt="Руки школьника держат раскрытую книжку с картинками" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+      <details class="pl" id="pl-9" >
+        <summary><span class="pl__n">Каллиграфия</span><span class="pl__g">школьники</span><span class="pl__p">600&nbsp;₽</span></summary>
+        <div class="pl__b">
+          <div><a class="btn" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a><p>Занятия по письму для школьников.</p></div>
+          <figure><img src="assets/price-9.webp" alt="Рука школьника выводит элементы прописи карандашом" width="1200" height="896" loading="lazy"></figure>
+        </div>
+      </details>
+    </div>
+    <div class="prices__note">
+      <p>Цены из каталога центра ВКонтакте. Baby-курс и творческие занятия – стоимость уточняйте.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fl" id="zaly" aria-labelledby="fl-h">
+  <div class="fl__in">
+    <h2 class="display" id="fl-h">Где мы занимаемся</h2>
+    <p class="fl__lead">Пять адресов. Выберите филиал и посмотрите, куда придёт ребёнок.</p>
+    <div class="fl__tabs" role="tablist" aria-label="Филиалы"><button type="button" role="tab" id="tab-1" aria-controls="pan-1" aria-selected="true" tabindex="0">Тула, центр</button><button type="button" role="tab" id="tab-2" aria-controls="pan-2" aria-selected="false" tabindex="-1">Тула</button><button type="button" role="tab" id="tab-3" aria-controls="pan-3" aria-selected="false" tabindex="-1">Петровский квартал</button><button type="button" role="tab" id="tab-4" aria-controls="pan-4" aria-selected="false" tabindex="-1">Левобережный</button><button type="button" role="tab" id="tab-5" aria-controls="pan-5" aria-selected="false" tabindex="-1">Болохово</button></div>
+    <div class="fl__pan" role="tabpanel" id="pan-1" aria-labelledby="tab-1">
+      <p class="fl__addr"><b>Тула, центр</b> пр. Ленина, 142</p>
+      <div class="fl__ph">
+        <figure><img src="assets/filial-1-1.webp" alt="Основной зал, пр. Ленина, 142" width="1200" height="750" loading="lazy"><figcaption>Основной зал</figcaption></figure>
+        <figure><img src="assets/filial-1-2.webp" alt="Кабинет, пр. Ленина, 142" width="800" height="600" loading="lazy"><figcaption>Кабинет</figcaption></figure>
+        <figure><img src="assets/filial-1-3.webp" alt="Зона ожидания или раздевалка, пр. Ленина, 142" width="800" height="600" loading="lazy"><figcaption>Холл и раздевалка</figcaption></figure>
+      </div>
+    </div>
+    <div class="fl__pan" role="tabpanel" id="pan-2" aria-labelledby="tab-2" hidden>
+      <p class="fl__addr"><b>Тула</b> ул. Аркадия Шипунова, 24</p>
+      <div class="fl__ph">
+        <figure><img src="assets/filial-2-1.webp" alt="Основной зал, ул. Аркадия Шипунова, 24" width="1200" height="750" loading="lazy"><figcaption>Основной зал</figcaption></figure>
+        <figure><img src="assets/filial-2-2.webp" alt="Кабинет, ул. Аркадия Шипунова, 24" width="800" height="600" loading="lazy"><figcaption>Кабинет</figcaption></figure>
+        <figure><img src="assets/filial-2-3.webp" alt="Зона ожидания или раздевалка, ул. Аркадия Шипунова, 24" width="800" height="600" loading="lazy"><figcaption>Холл и раздевалка</figcaption></figure>
+      </div>
+    </div>
+    <div class="fl__pan" role="tabpanel" id="pan-3" aria-labelledby="tab-3" hidden>
+      <p class="fl__addr"><b>Петровский квартал</b> ул. Петровская, 8</p>
+      <div class="fl__ph">
+        <figure><img src="assets/filial-3-1.webp" alt="Основной зал, ул. Петровская, 8" width="1200" height="750" loading="lazy"><figcaption>Основной зал</figcaption></figure>
+        <figure><img src="assets/filial-3-2.webp" alt="Кабинет, ул. Петровская, 8" width="800" height="600" loading="lazy"><figcaption>Кабинет</figcaption></figure>
+        <figure><img src="assets/filial-3-3.webp" alt="Зона ожидания или раздевалка, ул. Петровская, 8" width="800" height="600" loading="lazy"><figcaption>Холл и раздевалка</figcaption></figure>
+      </div>
+    </div>
+    <div class="fl__pan" role="tabpanel" id="pan-4" aria-labelledby="tab-4" hidden>
+      <p class="fl__addr"><b>Левобережный</b> ул. Восточная, 2</p>
+      <div class="fl__ph">
+        <figure><img src="assets/filial-4-1.webp" alt="Основной зал, ул. Восточная, 2" width="1200" height="750" loading="lazy"><figcaption>Основной зал</figcaption></figure>
+        <figure><img src="assets/filial-4-2.webp" alt="Кабинет, ул. Восточная, 2" width="800" height="600" loading="lazy"><figcaption>Кабинет</figcaption></figure>
+        <figure><img src="assets/filial-4-3.webp" alt="Зона ожидания или раздевалка, ул. Восточная, 2" width="800" height="600" loading="lazy"><figcaption>Холл и раздевалка</figcaption></figure>
+      </div>
+    </div>
+    <div class="fl__pan" role="tabpanel" id="pan-5" aria-labelledby="tab-5" hidden>
+      <p class="fl__addr"><b>Болохово</b> ул. Советская, 14</p>
+      <div class="fl__ph">
+        <figure><img src="assets/filial-5-1.webp" alt="Основной зал, ул. Советская, 14" width="1200" height="750" loading="lazy"><figcaption>Основной зал</figcaption></figure>
+        <figure><img src="assets/filial-5-2.webp" alt="Кабинет, ул. Советская, 14" width="800" height="600" loading="lazy"><figcaption>Кабинет</figcaption></figure>
+        <figure><img src="assets/filial-5-3.webp" alt="Зона ожидания или раздевалка, ул. Советская, 14" width="800" height="600" loading="lazy"><figcaption>Холл и раздевалка</figcaption></figure>
+      </div>
+    </div>
+    <div class="fl__team" id="komanda">
+      <h2 class="display">Кто занимается с детьми</h2>
+      <ul class="fl__list">
+      <li class="tm"><figure><img src="assets/team-1.webp" alt="Педагог: логопед" width="800" height="1000" loading="lazy"></figure><b>{{Имя Фамилия}}</b><span>Логопед</span></li>
+      <li class="tm"><figure><img src="assets/team-2.webp" alt="Педагог: нейропсихолог" width="800" height="1000" loading="lazy"></figure><b>{{Имя Фамилия}}</b><span>Нейропсихолог</span></li>
+      <li class="tm"><figure><img src="assets/team-3.webp" alt="Педагог: подготовка к школе" width="800" height="1000" loading="lazy"></figure><b>{{Имя Фамилия}}</b><span>Подготовка к школе</span></li>
+      <li class="tm"><figure><img src="assets/team-4.webp" alt="Педагог: английский для малышей" width="800" height="1000" loading="lazy"></figure><b>{{Имя Фамилия}}</b><span>Английский для малышей</span></li>
+      <li class="tm"><figure><img src="assets/team-5.webp" alt="Педагог: адаптивная физкультура" width="800" height="1000" loading="lazy"></figure><b>{{Имя Фамилия}}</b><span>Адаптивная физкультура</span></li>
+      <li class="tm"><figure><img src="assets/team-6.webp" alt="Педагог: каллиграфия и скорочтение" width="800" height="1000" loading="lazy"></figure><b>{{Имя Фамилия}}</b><span>Каллиграфия и скорочтение</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="rev" id="otzyvy" aria-labelledby="rev-h">
+  <div class="rev__in">
+    <div class="rev__top">
+      <h2 class="display" id="rev-h">Отзывы</h2>
+      <p class="rev__score"><b>4,8</b>на Яндекс.Картах, 82 оценки и 29 отзывов<br><a href="https://yandex.ru/maps/org/ekodetstvo/220627308596/" target="_blank" rel="noopener">Читать все отзывы</a></p>
+    </div>
+    <div class="quote rv">
+      <div><blockquote>«Главное, что сын бежит всегда с удовольствием.»</blockquote><cite>Ольга Владимировна, 8 октября</cite></div>
+    </div>
+    <div class="quote rv">
+      <div><blockquote>«Наш любимый центр, сын в нем посещает много разных занятий, всем очень довольны!»</blockquote><cite>Анонимный отзыв, 1 июля 2025</cite></div>
+    </div>
+    <div class="quote rv">
+      <div><blockquote>«Хороший центр, большой выбор занятий для деток.»</blockquote><cite>Мария Г., 20 ноября 2024</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="adresa" aria-labelledby="ad-h">
+  <div class="place rv">
+    <figure><img src="assets/vhod.webp" alt="Вход в центр ЭкоДетство на ул. Восточной, 2: вывеска с жирафом и список услуг" width="1000" height="1313"></figure>
+    <figure><img src="assets/ulica.webp" alt="Дом на ул. Восточной, 2 в Левобережном, где находится центр" width="1600" height="938"></figure>
+  </div>
+  <div class="coupon rv">
+    <div class="coupon__l">
+      <h2 id="ad-h">Ждём вас на занятии</h2>
+      <p>Четыре адреса в Туле и один в Болохово. На Восточной, 2 открыто до 21:00 (по данным Яндекс.Карт).</p>
+    </div>
+    <div class="coupon__r">
+      <p class="addr"><b>Тула, центр</b><span>пр. Ленина, 142</span></p>
+      <p class="addr"><b>Тула</b><span>ул. Аркадия Шипунова, 24</span></p>
+      <p class="addr"><b>Петровский квартал</b><span>ул. Петровская, 8</span></p>
+      <p class="addr"><b>Левобережный</b><span>ул. Восточная, 2</span></p>
+      <p class="addr"><b>Болохово</b><span>ул. Советская, 14</span></p>
+      <div class="coupon__btns">
+        <a class="btn" href="tel:+79066204473">Позвонить</a>
+        <a class="btn btn--yellow" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Написать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__top">
+    <div>
+      <h2 class="display">Приходите на занятие</h2>
+      <a class="btn btn--yellow" href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">Записаться</a>
+    </div>
+    <nav class="foot__links" aria-label="Контакты">
+      <a href="tel:+79066204473">+7 (906) 620-44-73</a>
+      <a href="https://vk.ru/ecodetstvotula" target="_blank" rel="noopener">ВКонтакте</a>
+      <a href="https://yandex.ru/maps/org/ekodetstvo/220627308596/" target="_blank" rel="noopener">Яндекс.Карты</a>
+    </nav>
+  </div>
+  <div class="foot__credit"><span>ЭкоДетство, детский центр развития, Тула</span><span>От 9 месяцев до 14 лет</span></div>
+  <img class="foot__name" src="assets/logo.png" alt="" width="900" height="291">
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
